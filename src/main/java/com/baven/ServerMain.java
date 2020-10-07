@@ -33,7 +33,7 @@ public class ServerMain {
 
                 });
         try {
-            ChannelFuture f = b.bind(12345).sync();
+            ChannelFuture f = b.bind(8080).sync();
 
             if (f.isSuccess()) System.out.println("服务器连接成功");
 
