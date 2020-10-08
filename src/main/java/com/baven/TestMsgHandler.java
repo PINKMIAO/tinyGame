@@ -5,25 +5,22 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
 
+/**
+ * 游戏消息处理器
+ */
 public class TestMsgHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("接收到了 msg, msg =>" + msg);
+        System.out.println("收到了msg" + msg);
 
-//        BinaryWebSocketFrame frame = (BinaryWebSocketFrame) msg;
-//        ByteBuf byteBuf = frame.content();
-        ByteBuf byteBuf = (ByteBuf) msg;
+        BinaryWebSocketFrame frame = (BinaryWebSocketFrame) msg;
+        ByteBuf byteBuf = frame.content();
 
-        byte[] byteArray = new byte[byteBuf.readableBytes()];
-        byteBuf.readBytes(byteArray);
+        byte[] byteArrays = new byte[byteBuf.readableBytes()];
+        byteBuf.readBytes(byteArrays);
 
-        System.out.print("收到的字节 = ");
-        for (byte b : byteArray) {
-            System.out.print(b);
-            System.out.print(", ");
-        }
-        System.out.println();
+        System.out.println(byteArrays);
 
     }
 }
