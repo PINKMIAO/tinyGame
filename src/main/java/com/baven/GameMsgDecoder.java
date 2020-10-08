@@ -5,7 +5,8 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
-import com.baven.msg.*;
+import com.baven.msg.GameMsgProtocol;
+
 
 public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
 
@@ -21,10 +22,15 @@ public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
         byteBuf.readShort();
         short msgCode = byteBuf.readShort();
 
+        byte[] msgBody = new byte[byteBuf.readableBytes()];
+        byteBuf.readBytes(msgBody);
+
         GeneratedMessageV3 cmd = null;
 
         switch (msgCode) {
-
+            case GameMsgProtocol.MsgCode.USER_ENTRY_CMD_VALUE:
+                cmd = GameMsgProtocol.UserEntryCmd.parseFrom(msgBody);
+                break;
         }
     }
 }
