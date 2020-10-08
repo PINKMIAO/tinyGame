@@ -11,7 +11,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
-
+/**
+* 基本的Netty框架，可用telnet自测
+*/
 public class ServerMain {
     public static void main(String[] args) {
 
