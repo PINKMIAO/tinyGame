@@ -14,13 +14,7 @@ public class TestMsgHandler extends SimpleChannelInboundHandler<Object> {
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("收到了msg" + msg);
 
-        BinaryWebSocketFrame frame = (BinaryWebSocketFrame) msg;
-        ByteBuf byteBuf = frame.content();
 
-        byte[] byteArrays = new byte[byteBuf.readableBytes()];
-        byteBuf.readBytes(byteArrays);
-
-        System.out.println(byteArrays);
 
     }
 }

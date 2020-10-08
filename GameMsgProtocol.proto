@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package msg;
-option java_package = "org.tinygame.herostory.msg";
+option java_package = "com.baven.msg";
 
 // 消息代号
 enum MsgCode {
