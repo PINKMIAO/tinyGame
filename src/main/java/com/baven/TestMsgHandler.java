@@ -73,25 +73,7 @@ public class TestMsgHandler extends SimpleChannelInboundHandler<Object> {
             GameMsgProtocol.UserEntryResult newResult = resultBuilder.build();
             _channelGroup.writeAndFlush(newResult);
 
-        } else if (msg instanceof GameMsgProtocol.UserMoveToCmd) {
-            Integer userId = (Integer) ctx.channel().attr(AttributeKey.valueOf("userId")).get();
-
-            if (null == userId) {
-                return;
-            }
-
-            GameMsgProtocol.UserMoveToCmd cmd = (GameMsgProtocol.UserMoveToCmd) msg;
-
-            GameMsgProtocol.UserMoveToResult.Builder resultBuilder =
-                    GameMsgProtocol.UserMoveToResult.newBuilder();
-            resultBuilder.setMoveUserId(userId);
-            resultBuilder.setMoveToPosX(cmd.getMoveToPosX());
-            resultBuilder.setMoveToPosY(cmd.getMoveToPosY());
-
-            GameMsgProtocol.UserMoveToResult newResult = resultBuilder.build();
-            _channelGroup.writeAndFlush(newResult);
-
-        }  else if (msg instanceof GameMsgProtocol.WhoElseIsHereCmd) {
+        } else if (msg instanceof GameMsgProtocol.WhoElseIsHereCmd) {
             GameMsgProtocol.WhoElseIsHereResult.Builder resultBuilder =
                     GameMsgProtocol.WhoElseIsHereResult.newBuilder();
 
@@ -109,6 +91,24 @@ public class TestMsgHandler extends SimpleChannelInboundHandler<Object> {
 
             GameMsgProtocol.WhoElseIsHereResult newResult = resultBuilder.build();
             ctx.writeAndFlush(newResult);
+
+        } else if (msg instanceof GameMsgProtocol.UserMoveToCmd) {
+            Integer userId = (Integer) ctx.channel().attr(AttributeKey.valueOf("userId")).get();
+
+            if (null == userId) {
+                return;
+            }
+
+            GameMsgProtocol.UserMoveToCmd cmd = (GameMsgProtocol.UserMoveToCmd) msg;
+
+            GameMsgProtocol.UserMoveToResult.Builder resultBuilder =
+                    GameMsgProtocol.UserMoveToResult.newBuilder();
+            resultBuilder.setMoveUserId(userId);
+            resultBuilder.setMoveToPosX(cmd.getMoveToPosX());
+            resultBuilder.setMoveToPosY(cmd.getMoveToPosY());
+
+            GameMsgProtocol.UserMoveToResult newResult = resultBuilder.build();
+            _channelGroup.writeAndFlush(newResult);
 
         }
 
