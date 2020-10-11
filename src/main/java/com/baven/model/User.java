@@ -1,4 +1,4 @@
-package com.baven;
+package com.baven.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
