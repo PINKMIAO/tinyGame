@@ -5,7 +5,7 @@ import com.baven.msg.GameMsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
 
-public class UserMoveToCmdHandler {
+public class UserMoveToCmdHandler implements ICmdHandler<GameMsgProtocol.UserMoveToCmd>{
 
     public void handle(ChannelHandlerContext ctx, GameMsgProtocol.UserMoveToCmd msg) {
         Integer userId = (Integer) ctx.channel().attr(AttributeKey.valueOf("userId")).get();

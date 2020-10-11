@@ -1,11 +1,10 @@
 package com.baven;
 
-import com.baven.cmdHandler.UserEntryCmdHandler;
-import com.baven.cmdHandler.UserMoveToCmdHandler;
-import com.baven.cmdHandler.WhoElseIsHereCmdHandler;
+import com.baven.cmdHandler.*;
 import com.baven.model.User;
 import com.baven.model.UserManager;
 import com.baven.msg.GameMsgProtocol;
+import com.google.protobuf.GeneratedMessageV3;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
@@ -53,12 +52,19 @@ public class TestMsgHandler extends SimpleChannelInboundHandler<Object> {
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("收到了msg, msg => " + msg);
 
-        if (msg instanceof GameMsgProtocol.UserEntryCmd) {
-            (new UserEntryCmdHandler()).handle(ctx, (GameMsgProtocol.UserEntryCmd) msg);
-        } else if (msg instanceof GameMsgProtocol.WhoElseIsHereCmd) {
-            (new WhoElseIsHereCmdHandler()).handle(ctx, (GameMsgProtocol.WhoElseIsHereCmd) msg);
-        } else if (msg instanceof GameMsgProtocol.UserMoveToCmd) {
-            (new UserMoveToCmdHandler()).handle(ctx, (GameMsgProtocol.UserMoveToCmd) msg);
+        ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msg.getClass());
+
+        if (null != cmdHandler) {
+            cmdHandler.handle(ctx, cast(msg));
+        }
+
+    }
+
+    private static <TCmd extends GeneratedMessageV3> TCmd cast(Object msg){
+        if (null == msg) {
+            return null;
+        } else {
+            return (TCmd) msg;
         }
     }
 

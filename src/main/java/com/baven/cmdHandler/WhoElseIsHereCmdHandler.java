@@ -5,7 +5,7 @@ import com.baven.model.UserManager;
 import com.baven.msg.GameMsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 
-public class WhoElseIsHereCmdHandler {
+public class WhoElseIsHereCmdHandler implements ICmdHandler<GameMsgProtocol.WhoElseIsHereCmd>{
 
     public void handle(ChannelHandlerContext ctx, GameMsgProtocol.WhoElseIsHereCmd msg) {
         GameMsgProtocol.WhoElseIsHereResult.Builder resultBuilder =

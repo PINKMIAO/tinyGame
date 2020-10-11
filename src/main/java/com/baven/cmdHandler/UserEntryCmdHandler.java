@@ -7,7 +7,7 @@ import com.baven.msg.GameMsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
 
-public class UserEntryCmdHandler {
+public class UserEntryCmdHandler implements ICmdHandler<GameMsgProtocol.UserEntryCmd>{
 
     public void handle(ChannelHandlerContext ctx, GameMsgProtocol.UserEntryCmd msg) {
         GameMsgProtocol.UserEntryCmd cmd = msg;
