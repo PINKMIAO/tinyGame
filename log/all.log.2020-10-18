@@ -1,0 +1,35 @@
+[08:52:50,212] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[08:56:45,132] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[08:57:03,566] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[09:03:48,879] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[09:03:53,244] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[09:04:02,542] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[09:07:40,489] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[09:07:41,147] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[09:07:44,795] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[09:07:52,803] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:39:28,508] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[12:40:40,226] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:40:46,702] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:40:50,765] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:40:55,694] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:41:01,526] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:43:58,790] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[12:44:03,519] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[12:44:11,323] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别的消息类型, msgClazz = com.baven.msg.GameMsgProtocol$WhoElseIsHereResult
+[13:23:52,398] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:24:19,278] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:33:08,341] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:35:04,981] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:37:40,527] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:38:37,118] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:39:16,070] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:40:16,730] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[13:50:56,497] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[14:39:38,265] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[14:40:26,246] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[14:47:51,563] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[14:49:20,499] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[14:49:30,065] [ERROR] AbstractLogger.handle_0ArgsCall --> 无法识别
+[14:52:04,050] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
+[14:53:08,525] [INFO] AbstractLogger.handle_0ArgsCall --> 成功连接服务器
